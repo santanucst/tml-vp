@@ -10,7 +10,7 @@ import { LogoutService } from "../services/logout.service";
   styleUrls: ['logout.component.css']
 })
 export class LogoutComponent implements OnInit {
-
+dfgjdr
   constructor(
     private localStorageService: LocalStorageService,
     private router: Router,
