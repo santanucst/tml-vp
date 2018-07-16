@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <!-- <h4 class="modal-title" style="margin-left:176px;">{{modalTitle}}</h4> -->
+    <button type="button" style="margin-left: 449px;" class="close" aria-label="Close" (click)="onClickOk();">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+        <span><i class="fa fa-check-circle" style="margin-left:210px;font-size:37px;color:#6f5312;"></i></span>
+    <p style="margin-left: 150px;">{{modalMessage}}</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="onClickOk();">Ok</button>
+  </div>
