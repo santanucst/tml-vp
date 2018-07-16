@@ -1,0 +1,73 @@
+<div class="page-container">
+    <div class="bgimg">
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse custom-nav">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img src="../../../../assets/images/tata_logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="TATA"> TATA Metaliks Ltd.
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" style="color : #545452;" href="#">Vendor Portal
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 login-form" >
+
+            <div class="alert alert-danger" role="alert" hidden>
+                <!-- {{ loginError }} -->
+            </div>
+
+        <!--start form-->
+        <form autocomplete="off" [formGroup]="userVerificationFormGroup" (ngSubmit)="onSubmitUsername()">
+            <!--start div for row-forgot password-form-->
+                <div class="form-row">
+                    <input type="text" id="form-email" class="form-textbox" formControlName="userName" required>
+                    <label for="form-email" class="form-label">Enter Your Username</label>
+                    <div>
+                        <div class="alert alert-danger" style="margin-top:-23px;" *ngIf="userVerificationFormGroup.get('userName').hasError('required') && userVerificationFormGroup.get('userName').touched">
+                        <i class="fa fa-exclamation-circle"></i> Username is required!
+                        </div>
+                    </div>
+                </div>
+            <!-- <div class="form-group">
+                <div class="input-group" style="margin-top:26px;">
+                    <label for="name" style="margin-top: 5px;">Username</label>
+                    <input type="text" class="form-control" formControlName="userName" style="margin-left: 9px;">
+                </div>
+                <div>
+                    <div class="alert alert-danger" *ngIf="userVerificationFormGroup.get('userName').hasError('required') && userVerificationFormGroup.get('userName').touched">
+                    <i class="fa fa-exclamation-circle"></i> Username is required!
+                    </div>
+                </div>
+            </div> -->
+
+                <!-- start button div -->
+                <div class="form-group pull-right">
+                    <div>
+                        <button type="submit" (click)="onCancel();" class="button-back">
+                                <i class="fa fa-chevron-circle-left"></i>
+                                    Back
+                        </button>
+                    </div>
+
+                    <div>   
+                            <button type="submit" class="button-next" [disabled]="!userVerificationFormGroup.valid">
+                              Next
+                              <i class="fa fa-chevron-circle-right"></i>
+                            </button>
+                    </div>
+                </div>
+                <!-- end of button div -->
+        </form>
+        <!--end of form-->
+    </div>
+    </div>
+</div>
