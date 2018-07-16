@@ -17,7 +17,7 @@ import { DBSettingsModel } from "../../shared/models/db-settings-model";
 })
 export class LoginComponent implements OnInit {
 
-  public title: string = "Vendor-Portal";
+  public title: string = "Vendor Portal";
   public loginForm: FormGroup;
   public loginError: string = '';
   public userType: string = "";
