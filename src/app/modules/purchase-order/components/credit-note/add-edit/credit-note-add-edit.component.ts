@@ -686,7 +686,7 @@ export class CreditNoteAddEditComponent implements OnInit {
     modalRef.componentInstance.modalMessage =
       //   this.complaintReferenceNo ?
       //     "Complaint Reference Number(DI) " + complaintRefNo + " updated successfully."
-      "Credit Note San ID " + invoiceTransactionNo + " created successfully.";
+      "Credit Note Scan ID " + invoiceTransactionNo + " created successfully.";
   }
   //end of method onOpenModal
 
